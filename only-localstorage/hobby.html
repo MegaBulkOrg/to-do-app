@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script defer src="assets/js/todo-app.js"></script>
+    <script>
+        let initialList = [
+            {name: 'Найти, где продаются нужные книги', done: false},
+            {name: 'Сходить на встречу китаистов', done: true},
+            {name: 'Найти, где в городе собираются моделисты', done: false},
+            {name: 'Купить нужные медиаторы', done: true},
+            {name: 'Выстретиться с товарицами', done: false}
+        ]
+        document.addEventListener('DOMContentLoaded', function(){
+            createTodoApp(document.querySelector('.todo-app'), 'Список дел по увлечениям', 'hobby', initialList);
+        })
+    </script>
+</head>
+<body>
+    <div class="container mt-5">
+        <nav class="nav">
+            <a class="btn btn-outline-primary me-2 mb-3" href="/todo-app">Работа</a>
+            <a class="btn btn-outline-primary me-2 mb-3" href="personal.html">Личное</a>
+            <a class="btn btn-primary me-2 mb-3" href="hobby.html">Увлечения</a>
+        </nav>
+        <div class="todo-app"></div>
+    </div>
+</body>
+</html>
